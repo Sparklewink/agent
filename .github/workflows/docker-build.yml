@@ -33,5 +33,5 @@ jobs:
         with:
           context: .
           push: true
-          # 生成镜像的标签，格式为 ghcr.io/用户名/仓库名:latest
-          tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository.name }}:latest
+          # **核心修正点**: 使用单一、更可靠的 ${{ github.repository }} 变量
+          tags: ghcr.io/${{ github.repository }}:latest
